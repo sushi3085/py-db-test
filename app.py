@@ -3,7 +3,7 @@ from flask import Flask, request, abort, jsonify, render_template
 app = Flask(__name__)
 
 # 監聽所有來自 /try 的 Post Request
-@app.route("/try", methods=['POST'])
+@app.route("/try", methods=['GET'])
 def callback():
     # get X-Line-Signature header value
     # signature = request.headers['X-Line-Signature']
